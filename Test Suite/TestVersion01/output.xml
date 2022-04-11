@@ -1,0 +1,992 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20220411 20:52:48.836" generator="Robot 3.1.2 (Python 2.7.8 on win32)">
+<suite source="C:\Automation\TAE\Test Suite\TestVersion01\TestSuite01.robot" id="s1" name="TestSuite01">
+<test id="s1-t1" name="TestCase01">
+<kw type="setup" name="Navigate_to_Site" library="SeleniumFunctions">
+<doc>Keyword to load web page under test.</doc>
+<arguments>
+<arg>http://demowebshop.tricentis.com/</arg>
+<arg>chrome</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20220411 20:52:51.503" level="INFO">Opening browser 'chrome' to base url 'http://demowebshop.tricentis.com/'.</msg>
+<status status="PASS" endtime="20220411 20:52:56.281" starttime="20220411 20:52:51.503"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20220411 20:52:56.460" starttime="20220411 20:52:56.281"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Login_Path}</arg>
+</arguments>
+<assign>
+<var>${Result_Value}</var>
+</assign>
+<msg timestamp="20220411 20:52:56.563" level="INFO">${Result_Value} = Log in</msg>
+<status status="PASS" endtime="20220411 20:52:56.564" starttime="20220411 20:52:56.461"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>should match regexp</arg>
+<arg>${Result_Value}</arg>
+<arg>${Validation_Value}</arg>
+</arguments>
+<assign>
+<var>${Result}</var>
+<var>${Msg}</var>
+</assign>
+<kw name="Should Match Regexp" library="BuiltIn">
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<arguments>
+<arg>${Result_Value}</arg>
+<arg>${Validation_Value}</arg>
+</arguments>
+<status status="PASS" endtime="20220411 20:52:56.566" starttime="20220411 20:52:56.565"></status>
+</kw>
+<msg timestamp="20220411 20:52:56.567" level="INFO">${Result} = PASS</msg>
+<msg timestamp="20220411 20:52:56.567" level="INFO">${Msg} = Log in</msg>
+<status status="PASS" endtime="20220411 20:52:56.567" starttime="20220411 20:52:56.564"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220411 20:52:56.922" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-19.png"&gt;&lt;img src="selenium-screenshot-19.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20220411 20:52:56.922" starttime="20220411 20:52:56.567"></status>
+</kw>
+<timeout value="10 seconds"></timeout>
+<status status="PASS" endtime="20220411 20:52:56.922" starttime="20220411 20:52:51.503"></status>
+</kw>
+<kw name="User_Login" library="SeleniumFunctions">
+<doc>Keywork to login with provided user email and password</doc>
+<arguments>
+<arg>${Email}</arg>
+<arg>${Password}</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Login_Path}</arg>
+</arguments>
+<msg timestamp="20220411 20:52:56.922" level="INFO">Clicking element '//*[@class='ico-login']'.</msg>
+<status status="PASS" endtime="20220411 20:52:57.700" starttime="20220411 20:52:56.922"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Email_Input_Path}</arg>
+<arg>${Email}</arg>
+</arguments>
+<msg timestamp="20220411 20:52:57.705" level="INFO">Typing text 'test12345april@test.com' into text field '//*[@id="Email"]'.</msg>
+<status status="PASS" endtime="20220411 20:52:57.867" starttime="20220411 20:52:57.701"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Password_Input_Path}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20220411 20:52:57.869" level="INFO">Typing password into text field '//*[@id="Password"]'.</msg>
+<status status="PASS" endtime="20220411 20:52:58.273" starttime="20220411 20:52:57.867"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220411 20:52:58.536" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-20.png"&gt;&lt;img src="selenium-screenshot-20.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20220411 20:52:58.536" starttime="20220411 20:52:58.274"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${Login_Button_Path}</arg>
+</arguments>
+<msg timestamp="20220411 20:52:58.546" level="INFO">Clicking button '//Input[@class='button-1 login-button']'.</msg>
+<status status="PASS" endtime="20220411 20:53:00.264" starttime="20220411 20:52:58.536"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Username_Path}</arg>
+</arguments>
+<assign>
+<var>${Result_Value}</var>
+</assign>
+<msg timestamp="20220411 20:53:00.306" level="INFO">${Result_Value} = test12345april@test.com</msg>
+<status status="PASS" endtime="20220411 20:53:00.307" starttime="20220411 20:53:00.264"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>should match regexp</arg>
+<arg>${Result_Value}</arg>
+<arg>${Email}</arg>
+</arguments>
+<assign>
+<var>${Result}</var>
+<var>${Msg}</var>
+</assign>
+<kw name="Should Match Regexp" library="BuiltIn">
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<arguments>
+<arg>${Result_Value}</arg>
+<arg>${Email}</arg>
+</arguments>
+<status status="PASS" endtime="20220411 20:53:00.310" starttime="20220411 20:53:00.308"></status>
+</kw>
+<msg timestamp="20220411 20:53:00.310" level="INFO">${Result} = PASS</msg>
+<msg timestamp="20220411 20:53:00.310" level="INFO">${Msg} = test12345april@test.com</msg>
+<status status="PASS" endtime="20220411 20:53:00.310" starttime="20220411 20:53:00.307"></status>
+</kw>
+<timeout value="10 seconds"></timeout>
+<status status="PASS" endtime="20220411 20:53:00.310" starttime="20220411 20:52:56.922"></status>
+</kw>
+<kw name="Select_Item_GiftCard" library="SeleniumFunctions">
+<doc>Keyword Navigate to Giftcard page and select giftcard</doc>
+<arguments>
+<arg>${Purchase_Item}</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${GiftCard_Menu_Path}</arg>
+</arguments>
+<msg timestamp="20220411 20:53:00.312" level="INFO">Clicking element '//*[@href='/gift-cards']'.</msg>
+<status status="PASS" endtime="20220411 20:53:01.345" starttime="20220411 20:53:00.311"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${GiftCard_page_Value}</arg>
+</arguments>
+<status status="PASS" endtime="20220411 20:53:01.377" starttime="20220411 20:53:01.345"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220411 20:53:01.598" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-21.png"&gt;&lt;img src="selenium-screenshot-21.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20220411 20:53:01.598" starttime="20220411 20:53:01.378"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${Add_item_to_cart_path}</arg>
+</arguments>
+<msg timestamp="20220411 20:53:01.600" level="INFO">Clicking button '//*[@class='button-2 product-box-add-to-cart-button']'.</msg>
+<status status="PASS" endtime="20220411 20:53:01.686" starttime="20220411 20:53:01.599"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${Item_page_Value}</arg>
+</arguments>
+<status status="PASS" endtime="20220411 20:53:05.391" starttime="20220411 20:53:01.686"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Item_Name_Path}</arg>
+</arguments>
+<assign>
+<var>${Result_Value}</var>
+</assign>
+<msg timestamp="20220411 20:53:05.434" level="INFO">${Result_Value} = $5 VIRTUAL GIFT CARD</msg>
+<status status="PASS" endtime="20220411 20:53:05.434" starttime="20220411 20:53:05.392"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>should match</arg>
+<arg>'${Result_Value}'</arg>
+<arg>${CardName}</arg>
+</arguments>
+<assign>
+<var>${Result}</var>
+<var>${Msg}</var>
+</assign>
+<kw name="Should Match" library="BuiltIn">
+<doc>Fails if the given ``string`` does not match the given ``pattern``.</doc>
+<arguments>
+<arg>'${Result_Value}'</arg>
+<arg>${CardName}</arg>
+</arguments>
+<msg timestamp="20220411 20:53:05.437" level="FAIL">''$5 VIRTUAL GIFT CARD'' does not match '$5 Virtual Gift Card'</msg>
+<status status="FAIL" endtime="20220411 20:53:05.437" starttime="20220411 20:53:05.435"></status>
+</kw>
+<msg timestamp="20220411 20:53:05.437" level="INFO">${Result} = FAIL</msg>
+<msg timestamp="20220411 20:53:05.437" level="INFO">${Msg} = ''$5 VIRTUAL GIFT CARD'' does not match '$5 Virtual Gift Card'</msg>
+<status status="PASS" endtime="20220411 20:53:05.437" starttime="20220411 20:53:05.435"></status>
+</kw>
+<timeout value="10 seconds"></timeout>
+<status status="PASS" endtime="20220411 20:53:05.438" starttime="20220411 20:53:00.311"></status>
+</kw>
+<kw name="Add_Item_to_Cart" library="SeleniumFunctions">
+<doc>Keyword to add recipient details</doc>
+<arguments>
+<arg>${RecipientName}</arg>
+<arg>${RecipientEmail}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Recipient_Name_Path}</arg>
+<arg>${RecipientName}</arg>
+</arguments>
+<msg timestamp="20220411 20:53:05.442" level="INFO">Typing text 'test' into text field '//*[@class='recipient-name']'.</msg>
+<status status="PASS" endtime="20220411 20:53:05.580" starttime="20220411 20:53:05.441"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Recipient_Email_Path}</arg>
+<arg>${RecipientEmail}</arg>
+</arguments>
+<msg timestamp="20220411 20:53:05.583" level="INFO">Typing text 'test12345april@test.com' into text field '//*[@class='recipient-email']'.</msg>
+<status status="PASS" endtime="20220411 20:53:05.744" starttime="20220411 20:53:05.581"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220411 20:53:05.970" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-22.png"&gt;&lt;img src="selenium-screenshot-22.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20220411 20:53:05.970" starttime="20220411 20:53:05.744"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${Add_to_cart_Path}</arg>
+</arguments>
+<msg timestamp="20220411 20:53:05.971" level="INFO">Clicking button '//*[@class='button-1 add-to-cart-button']'.</msg>
+<status status="PASS" endtime="20220411 20:53:06.163" starttime="20220411 20:53:05.970"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//*[@id="bar-notification"]</arg>
+</arguments>
+<status status="PASS" endtime="20220411 20:53:06.788" starttime="20220411 20:53:06.164"></status>
+</kw>
+<timeout value="10 seconds"></timeout>
+<status status="PASS" endtime="20220411 20:53:06.788" starttime="20220411 20:53:05.440"></status>
+</kw>
+<kw name="Validate_Cart" library="SeleniumFunctions">
+<doc>Keyword to validate selected giftcard and quantity</doc>
+<arguments>
+<arg>${Purchase_Item}</arg>
+<arg>1</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Cart_menu_Path}</arg>
+</arguments>
+<msg timestamp="20220411 20:53:06.791" level="INFO">Clicking element '//*[@class='cart-label']'.</msg>
+<status status="PASS" endtime="20220411 20:53:07.752" starttime="20220411 20:53:06.790"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220411 20:53:07.996" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-23.png"&gt;&lt;img src="selenium-screenshot-23.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20220411 20:53:07.997" starttime="20220411 20:53:07.753"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${Validate_Cart_Item_path}</arg>
+</arguments>
+<status status="PASS" endtime="20220411 20:53:08.025" starttime="20220411 20:53:07.997"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Validate_Cart_Item_path}</arg>
+</arguments>
+<assign>
+<var>${Result_Value}</var>
+</assign>
+<msg timestamp="20220411 20:53:08.050" level="INFO">${Result_Value} = $5 Virtual Gift Card</msg>
+<status status="PASS" endtime="20220411 20:53:08.050" starttime="20220411 20:53:08.025"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>should match</arg>
+<arg>${Result_Value}</arg>
+<arg>${CardName}</arg>
+</arguments>
+<assign>
+<var>${Result}</var>
+<var>${Msg}</var>
+</assign>
+<kw name="Should Match" library="BuiltIn">
+<doc>Fails if the given ``string`` does not match the given ``pattern``.</doc>
+<arguments>
+<arg>${Result_Value}</arg>
+<arg>${CardName}</arg>
+</arguments>
+<status status="PASS" endtime="20220411 20:53:08.052" starttime="20220411 20:53:08.051"></status>
+</kw>
+<msg timestamp="20220411 20:53:08.052" level="INFO">${Result} = PASS</msg>
+<msg timestamp="20220411 20:53:08.052" level="INFO">${Msg} = None</msg>
+<status status="PASS" endtime="20220411 20:53:08.052" starttime="20220411 20:53:08.050"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Quantity_path}</arg>
+<arg>${Quantity}</arg>
+</arguments>
+<msg timestamp="20220411 20:53:08.054" level="INFO">Typing text '1' into text field '//*[starts-with(@name, 'itemquantity')]'.</msg>
+<status status="PASS" endtime="20220411 20:53:08.155" starttime="20220411 20:53:08.052"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220411 20:53:08.336" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-24.png"&gt;&lt;img src="selenium-screenshot-24.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20220411 20:53:08.337" starttime="20220411 20:53:08.155"></status>
+</kw>
+<timeout value="10 seconds"></timeout>
+<status status="PASS" endtime="20220411 20:53:08.337" starttime="20220411 20:53:06.789"></status>
+</kw>
+<kw name="Checkout_Item" library="SeleniumFunctions">
+<doc>Keyword to confirm terms and submit order for check out process</doc>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Terms_Path}</arg>
+</arguments>
+<msg timestamp="20220411 20:53:08.339" level="INFO">Clicking element '//*[@id='termsofservice']'.</msg>
+<status status="PASS" endtime="20220411 20:53:08.399" starttime="20220411 20:53:08.338"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${Checkout_button_path}</arg>
+</arguments>
+<msg timestamp="20220411 20:53:08.400" level="INFO">Clicking button '//*[@class='button-1 checkout-button']'.</msg>
+<status status="PASS" endtime="20220411 20:53:10.134" starttime="20220411 20:53:08.399"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Checkout_page_path}</arg>
+</arguments>
+<assign>
+<var>${Result_Value}</var>
+</assign>
+<msg timestamp="20220411 20:53:10.164" level="INFO">${Result_Value} = Checkout</msg>
+<status status="PASS" endtime="20220411 20:53:10.164" starttime="20220411 20:53:10.135"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>should match regexp</arg>
+<arg>${Result_Value}</arg>
+<arg>Checkout</arg>
+</arguments>
+<assign>
+<var>${Result}</var>
+<var>${Msg}</var>
+</assign>
+<kw name="Should Match Regexp" library="BuiltIn">
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<arguments>
+<arg>${Result_Value}</arg>
+<arg>Checkout</arg>
+</arguments>
+<status status="PASS" endtime="20220411 20:53:10.166" starttime="20220411 20:53:10.165"></status>
+</kw>
+<msg timestamp="20220411 20:53:10.166" level="INFO">${Result} = PASS</msg>
+<msg timestamp="20220411 20:53:10.166" level="INFO">${Msg} = Checkout</msg>
+<status status="PASS" endtime="20220411 20:53:10.166" starttime="20220411 20:53:10.165"></status>
+</kw>
+<timeout value="10 seconds"></timeout>
+<status status="PASS" endtime="20220411 20:53:10.167" starttime="20220411 20:53:08.338"></status>
+</kw>
+<kw name="Complete_Order" library="SeleniumFunctions">
+<doc>Keyword to complete order through billing address and type of payment.</doc>
+<arguments>
+<arg>${Address}</arg>
+</arguments>
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>${Address_path}</arg>
+<arg>${Address}</arg>
+</arguments>
+<msg timestamp="20220411 20:53:10.169" level="INFO">Selecting options from selection list '//*[@id='billing-address-select']' by label test test, test, test 3333, Australia.</msg>
+<status status="PASS" endtime="20220411 20:53:10.214" starttime="20220411 20:53:10.168"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220411 20:53:10.399" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-25.png"&gt;&lt;img src="selenium-screenshot-25.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20220411 20:53:10.399" starttime="20220411 20:53:10.214"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${Address_Button}</arg>
+</arguments>
+<msg timestamp="20220411 20:53:10.400" level="INFO">Clicking button '//*[@class='button-1 new-address-next-step-button']'.</msg>
+<status status="PASS" endtime="20220411 20:53:10.465" starttime="20220411 20:53:10.399"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${Payment_option_Path}</arg>
+</arguments>
+<status status="PASS" endtime="20220411 20:53:11.190" starttime="20220411 20:53:10.466"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220411 20:53:11.435" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-26.png"&gt;&lt;img src="selenium-screenshot-26.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20220411 20:53:11.435" starttime="20220411 20:53:11.190"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Payment_option_Path}</arg>
+</arguments>
+<msg timestamp="20220411 20:53:11.436" level="INFO">Clicking element '//*[@id='paymentmethod_0']'.</msg>
+<status status="PASS" endtime="20220411 20:53:11.558" starttime="20220411 20:53:11.435"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${Payment_button_path}</arg>
+</arguments>
+<status status="PASS" endtime="20220411 20:53:11.614" starttime="20220411 20:53:11.558"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220411 20:53:11.832" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-27.png"&gt;&lt;img src="selenium-screenshot-27.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20220411 20:53:11.832" starttime="20220411 20:53:11.614"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${Payment_button_path}</arg>
+</arguments>
+<msg timestamp="20220411 20:53:11.834" level="INFO">Clicking button '//*[@class='button-1 payment-method-next-step-button']'.</msg>
+<status status="PASS" endtime="20220411 20:53:11.922" starttime="20220411 20:53:11.832"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${Payment_info_Button_path}</arg>
+</arguments>
+<status status="PASS" endtime="20220411 20:53:12.442" starttime="20220411 20:53:11.922"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220411 20:53:12.621" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-28.png"&gt;&lt;img src="selenium-screenshot-28.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20220411 20:53:12.621" starttime="20220411 20:53:12.442"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${Payment_info_Button_path}</arg>
+</arguments>
+<msg timestamp="20220411 20:53:12.624" level="INFO">Clicking button '//*[@class='button-1 payment-info-next-step-button']'.</msg>
+<status status="PASS" endtime="20220411 20:53:12.706" starttime="20220411 20:53:12.621"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220411 20:53:13.014" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-29.png"&gt;&lt;img src="selenium-screenshot-29.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20220411 20:53:13.014" starttime="20220411 20:53:12.706"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${confirm_order_path}</arg>
+</arguments>
+<status status="PASS" endtime="20220411 20:53:13.585" starttime="20220411 20:53:13.015"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220411 20:53:13.775" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-30.png"&gt;&lt;img src="selenium-screenshot-30.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20220411 20:53:13.775" starttime="20220411 20:53:13.585"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${confirm_order_path}</arg>
+</arguments>
+<msg timestamp="20220411 20:53:13.791" level="INFO">Clicking button '//*[@class='button-1 confirm-order-next-step-button']'.</msg>
+<status status="PASS" endtime="20220411 20:53:13.936" starttime="20220411 20:53:13.775"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220411 20:53:14.247" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-31.png"&gt;&lt;img src="selenium-screenshot-31.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20220411 20:53:14.247" starttime="20220411 20:53:13.937"></status>
+</kw>
+<timeout value="10 seconds"></timeout>
+<status status="PASS" endtime="20220411 20:53:14.247" starttime="20220411 20:53:10.167"></status>
+</kw>
+<kw name="Validate_Order_Completion" library="SeleniumFunctions">
+<doc>Keyword to validate successfull order completion.</doc>
+<arguments>
+<arg>${Order_Success_MSG}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${Order_completion}</arg>
+</arguments>
+<status status="PASS" endtime="20220411 20:53:14.293" starttime="20220411 20:53:14.251"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220411 20:53:14.612" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-32.png"&gt;&lt;img src="selenium-screenshot-32.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20220411 20:53:14.612" starttime="20220411 20:53:14.293"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Order_completion}</arg>
+</arguments>
+<assign>
+<var>${Result_Value}</var>
+</assign>
+<msg timestamp="20220411 20:53:14.665" level="INFO">${Result_Value} = Billing Address</msg>
+<status status="PASS" endtime="20220411 20:53:14.665" starttime="20220411 20:53:14.613"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>should match regexp</arg>
+<arg>${Result_Value}</arg>
+<arg>${Order_completion_String}</arg>
+</arguments>
+<assign>
+<var>${Result}</var>
+<var>${Msg}</var>
+</assign>
+<kw name="Should Match Regexp" library="BuiltIn">
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<arguments>
+<arg>${Result_Value}</arg>
+<arg>${Order_completion_String}</arg>
+</arguments>
+<msg timestamp="20220411 20:53:14.673" level="FAIL">'Billing Address' does not match 'Your order has been successfully processed!'</msg>
+<status status="FAIL" endtime="20220411 20:53:14.673" starttime="20220411 20:53:14.665"></status>
+</kw>
+<msg timestamp="20220411 20:53:14.673" level="INFO">${Result} = FAIL</msg>
+<msg timestamp="20220411 20:53:14.673" level="INFO">${Msg} = 'Billing Address' does not match 'Your order has been successfully processed!'</msg>
+<status status="PASS" endtime="20220411 20:53:14.673" starttime="20220411 20:53:14.665"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>Wait Until Element Is Enabled</arg>
+<arg>${Click_Continue_path}</arg>
+</arguments>
+<status status="PASS" endtime="20220411 20:53:14.675" starttime="20220411 20:53:14.673"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>click button</arg>
+<arg>${Click_Continue_path}</arg>
+</arguments>
+<status status="PASS" endtime="20220411 20:53:14.675" starttime="20220411 20:53:14.675"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20220411 20:53:16.683" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20220411 20:53:16.683" starttime="20220411 20:53:14.675"></status>
+</kw>
+<timeout value="10 seconds"></timeout>
+<status status="PASS" endtime="20220411 20:53:16.683" starttime="20220411 20:53:14.250"></status>
+</kw>
+<kw type="teardown" name="TearDown" library="SeleniumFunctions">
+<doc>Keyword to logout and close browser gracefully</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${Logout_path}</arg>
+</arguments>
+<status status="PASS" endtime="20220411 20:53:16.727" starttime="20220411 20:53:16.685"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Logout_path}</arg>
+</arguments>
+<msg timestamp="20220411 20:53:16.728" level="INFO">Clicking element '//*[@class='ico-logout']'.</msg>
+<status status="PASS" endtime="20220411 20:53:18.131" starttime="20220411 20:53:16.728"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220411 20:53:18.384" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-33.png"&gt;&lt;img src="selenium-screenshot-33.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20220411 20:53:18.384" starttime="20220411 20:53:18.132"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${Login_Path}</arg>
+</arguments>
+<status status="PASS" endtime="20220411 20:53:18.426" starttime="20220411 20:53:18.384"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Login_Path}</arg>
+</arguments>
+<assign>
+<var>${Result_Value}</var>
+</assign>
+<msg timestamp="20220411 20:53:18.461" level="INFO">${Result_Value} = Log in</msg>
+<status status="PASS" endtime="20220411 20:53:18.461" starttime="20220411 20:53:18.427"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>should match regexp</arg>
+<arg>${Result_Value}</arg>
+<arg>${Validation_Value}</arg>
+</arguments>
+<assign>
+<var>${Result}</var>
+<var>${Msg}</var>
+</assign>
+<kw name="Should Match Regexp" library="BuiltIn">
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<arguments>
+<arg>${Result_Value}</arg>
+<arg>${Validation_Value}</arg>
+</arguments>
+<status status="PASS" endtime="20220411 20:53:18.463" starttime="20220411 20:53:18.462"></status>
+</kw>
+<msg timestamp="20220411 20:53:18.463" level="INFO">${Result} = PASS</msg>
+<msg timestamp="20220411 20:53:18.463" level="INFO">${Msg} = Log in</msg>
+<status status="PASS" endtime="20220411 20:53:18.463" starttime="20220411 20:53:18.461"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20220411 20:53:21.311" starttime="20220411 20:53:18.464"></status>
+</kw>
+<timeout value="10 seconds"></timeout>
+<status status="PASS" endtime="20220411 20:53:21.311" starttime="20220411 20:53:16.684"></status>
+</kw>
+<doc>Test to purchase giftcard item and validate successfull purchase</doc>
+<tags>
+<tag>Purchase</tag>
+<tag>Suite01</tag>
+</tags>
+<status status="PASS" endtime="20220411 20:53:21.311" critical="yes" starttime="20220411 20:52:51.503"></status>
+</test>
+<test id="s1-t2" name="TestCase02">
+<kw type="setup" name="Navigate_to_Site" library="SeleniumFunctions">
+<doc>Keyword to load web page under test.</doc>
+<arguments>
+<arg>http://demowebshop.tricentis.com/</arg>
+<arg>chrome</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20220411 20:53:21.311" level="INFO">Opening browser 'chrome' to base url 'http://demowebshop.tricentis.com/'.</msg>
+<status status="PASS" endtime="20220411 20:53:25.742" starttime="20220411 20:53:21.311"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20220411 20:53:25.896" starttime="20220411 20:53:25.743"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Login_Path}</arg>
+</arguments>
+<assign>
+<var>${Result_Value}</var>
+</assign>
+<msg timestamp="20220411 20:53:25.947" level="INFO">${Result_Value} = Log in</msg>
+<status status="PASS" endtime="20220411 20:53:25.947" starttime="20220411 20:53:25.898"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>should match regexp</arg>
+<arg>${Result_Value}</arg>
+<arg>${Validation_Value}</arg>
+</arguments>
+<assign>
+<var>${Result}</var>
+<var>${Msg}</var>
+</assign>
+<kw name="Should Match Regexp" library="BuiltIn">
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<arguments>
+<arg>${Result_Value}</arg>
+<arg>${Validation_Value}</arg>
+</arguments>
+<status status="PASS" endtime="20220411 20:53:25.949" starttime="20220411 20:53:25.948"></status>
+</kw>
+<msg timestamp="20220411 20:53:25.949" level="INFO">${Result} = PASS</msg>
+<msg timestamp="20220411 20:53:25.949" level="INFO">${Msg} = Log in</msg>
+<status status="PASS" endtime="20220411 20:53:25.949" starttime="20220411 20:53:25.947"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220411 20:53:26.238" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-34.png"&gt;&lt;img src="selenium-screenshot-34.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20220411 20:53:26.238" starttime="20220411 20:53:25.949"></status>
+</kw>
+<timeout value="10 seconds"></timeout>
+<status status="PASS" endtime="20220411 20:53:26.239" starttime="20220411 20:53:21.311"></status>
+</kw>
+<kw name="User_Login" library="SeleniumFunctions">
+<doc>Keywork to login with provided user email and password</doc>
+<arguments>
+<arg>${Email}</arg>
+<arg>${Password}</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Login_Path}</arg>
+</arguments>
+<msg timestamp="20220411 20:53:26.241" level="INFO">Clicking element '//*[@class='ico-login']'.</msg>
+<status status="PASS" endtime="20220411 20:53:26.926" starttime="20220411 20:53:26.240"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Email_Input_Path}</arg>
+<arg>${Email}</arg>
+</arguments>
+<msg timestamp="20220411 20:53:26.930" level="INFO">Typing text 'test12345april@test.com' into text field '//*[@id="Email"]'.</msg>
+<status status="PASS" endtime="20220411 20:53:27.036" starttime="20220411 20:53:26.927"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Password_Input_Path}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20220411 20:53:27.037" level="INFO">Typing password into text field '//*[@id="Password"]'.</msg>
+<status status="PASS" endtime="20220411 20:53:27.140" starttime="20220411 20:53:27.037"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220411 20:53:27.403" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-35.png"&gt;&lt;img src="selenium-screenshot-35.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20220411 20:53:27.403" starttime="20220411 20:53:27.140"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${Login_Button_Path}</arg>
+</arguments>
+<msg timestamp="20220411 20:53:27.403" level="INFO">Clicking button '//Input[@class='button-1 login-button']'.</msg>
+<status status="PASS" endtime="20220411 20:53:28.795" starttime="20220411 20:53:27.403"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Username_Path}</arg>
+</arguments>
+<assign>
+<var>${Result_Value}</var>
+</assign>
+<msg timestamp="20220411 20:53:28.827" level="INFO">${Result_Value} = test12345april@test.com</msg>
+<status status="PASS" endtime="20220411 20:53:28.827" starttime="20220411 20:53:28.795"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>should match regexp</arg>
+<arg>${Result_Value}</arg>
+<arg>${Email}</arg>
+</arguments>
+<assign>
+<var>${Result}</var>
+<var>${Msg}</var>
+</assign>
+<kw name="Should Match Regexp" library="BuiltIn">
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<arguments>
+<arg>${Result_Value}</arg>
+<arg>${Email}</arg>
+</arguments>
+<status status="PASS" endtime="20220411 20:53:28.829" starttime="20220411 20:53:28.828"></status>
+</kw>
+<msg timestamp="20220411 20:53:28.829" level="INFO">${Result} = PASS</msg>
+<msg timestamp="20220411 20:53:28.829" level="INFO">${Msg} = test12345april@test.com</msg>
+<status status="PASS" endtime="20220411 20:53:28.829" starttime="20220411 20:53:28.828"></status>
+</kw>
+<timeout value="10 seconds"></timeout>
+<status status="PASS" endtime="20220411 20:53:28.829" starttime="20220411 20:53:26.240"></status>
+</kw>
+<kw name="Navigate_to_Wishlist" library="SeleniumFunctions">
+<doc>Keyword to navigate to wishlist page</doc>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Whislist_Menu_Path}</arg>
+</arguments>
+<msg timestamp="20220411 20:53:28.834" level="INFO">Clicking element '//*[@class='wishlist-qty']'.</msg>
+<status status="PASS" endtime="20220411 20:53:29.700" starttime="20220411 20:53:28.831"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Wishlist_validation_Path}</arg>
+</arguments>
+<assign>
+<var>${Result_Value}</var>
+</assign>
+<msg timestamp="20220411 20:53:29.737" level="INFO">${Result_Value} = Wishlist</msg>
+<status status="PASS" endtime="20220411 20:53:29.737" starttime="20220411 20:53:29.700"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>should match regexp</arg>
+<arg>${Result_Value}</arg>
+<arg>${Wishlist_Validation_Value}</arg>
+</arguments>
+<assign>
+<var>${Result}</var>
+<var>${Msg}</var>
+</assign>
+<kw name="Should Match Regexp" library="BuiltIn">
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<arguments>
+<arg>${Result_Value}</arg>
+<arg>${Wishlist_Validation_Value}</arg>
+</arguments>
+<status status="PASS" endtime="20220411 20:53:29.739" starttime="20220411 20:53:29.738"></status>
+</kw>
+<msg timestamp="20220411 20:53:29.739" level="INFO">${Result} = PASS</msg>
+<msg timestamp="20220411 20:53:29.739" level="INFO">${Msg} = Wishlist</msg>
+<status status="PASS" endtime="20220411 20:53:29.739" starttime="20220411 20:53:29.738"></status>
+</kw>
+<timeout value="10 seconds"></timeout>
+<status status="PASS" endtime="20220411 20:53:29.739" starttime="20220411 20:53:28.831"></status>
+</kw>
+<kw name="Validate_Wishlist" library="SeleniumFunctions">
+<doc>Keyword to valiate wishlist is retained after session logout</doc>
+<arguments>
+<arg>${Wishlist_Item}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220411 20:53:29.927" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-36.png"&gt;&lt;img src="selenium-screenshot-36.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20220411 20:53:29.927" starttime="20220411 20:53:29.741"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${wishlist_Item}</arg>
+</arguments>
+<assign>
+<var>${Result_Value}</var>
+</assign>
+<msg timestamp="20220411 20:53:29.945" level="INFO">Current page contains text '$25 Virtual Gift Card'.</msg>
+<msg timestamp="20220411 20:53:29.945" level="INFO">${Result_Value} = None</msg>
+<status status="PASS" endtime="20220411 20:53:29.945" starttime="20220411 20:53:29.927"></status>
+</kw>
+<timeout value="10 seconds"></timeout>
+<status status="PASS" endtime="20220411 20:53:29.945" starttime="20220411 20:53:29.740"></status>
+</kw>
+<kw type="teardown" name="TearDown" library="SeleniumFunctions">
+<doc>Keyword to logout and close browser gracefully</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${Logout_path}</arg>
+</arguments>
+<status status="PASS" endtime="20220411 20:53:29.967" starttime="20220411 20:53:29.948"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Logout_path}</arg>
+</arguments>
+<msg timestamp="20220411 20:53:29.967" level="INFO">Clicking element '//*[@class='ico-logout']'.</msg>
+<status status="PASS" endtime="20220411 20:53:31.171" starttime="20220411 20:53:29.967"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220411 20:53:31.391" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-37.png"&gt;&lt;img src="selenium-screenshot-37.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20220411 20:53:31.391" starttime="20220411 20:53:31.171"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${Login_Path}</arg>
+</arguments>
+<status status="PASS" endtime="20220411 20:53:31.422" starttime="20220411 20:53:31.391"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Login_Path}</arg>
+</arguments>
+<assign>
+<var>${Result_Value}</var>
+</assign>
+<msg timestamp="20220411 20:53:31.444" level="INFO">${Result_Value} = Log in</msg>
+<status status="PASS" endtime="20220411 20:53:31.444" starttime="20220411 20:53:31.422"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>should match regexp</arg>
+<arg>${Result_Value}</arg>
+<arg>${Validation_Value}</arg>
+</arguments>
+<assign>
+<var>${Result}</var>
+<var>${Msg}</var>
+</assign>
+<kw name="Should Match Regexp" library="BuiltIn">
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<arguments>
+<arg>${Result_Value}</arg>
+<arg>${Validation_Value}</arg>
+</arguments>
+<status status="PASS" endtime="20220411 20:53:31.449" starttime="20220411 20:53:31.445"></status>
+</kw>
+<msg timestamp="20220411 20:53:31.449" level="INFO">${Result} = PASS</msg>
+<msg timestamp="20220411 20:53:31.449" level="INFO">${Msg} = Log in</msg>
+<status status="PASS" endtime="20220411 20:53:31.450" starttime="20220411 20:53:31.445"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20220411 20:53:34.092" starttime="20220411 20:53:31.450"></status>
+</kw>
+<timeout value="10 seconds"></timeout>
+<status status="PASS" endtime="20220411 20:53:34.092" starttime="20220411 20:53:29.946"></status>
+</kw>
+<doc>Test to validate user login is successfull and validate wishlist item retainment.</doc>
+<tags>
+<tag>Suite01</tag>
+<tag>Wishlist</tag>
+</tags>
+<status status="PASS" endtime="20220411 20:53:34.092" critical="yes" starttime="20220411 20:53:21.311"></status>
+</test>
+<status status="PASS" endtime="20220411 20:53:34.107" starttime="20220411 20:52:48.836"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="1">Purchase</stat>
+<stat fail="0" pass="2">Suite01</stat>
+<stat fail="0" pass="1">Wishlist</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="TestSuite01" pass="2">TestSuite01</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
