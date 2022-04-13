@@ -71,6 +71,11 @@ To install RIDE, open the command prompt and type the following command.
 ```bash
 pip install robotframework-ride
 ```
+Step 6: Install Selenium library
+```bash
+pip install --upgrade robotframework-selenium2library
+```
+
 To open RIDE, open the command prompt and type the following command:
 ```bash
 ride.py
